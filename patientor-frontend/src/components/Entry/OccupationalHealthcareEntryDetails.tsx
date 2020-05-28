@@ -2,7 +2,11 @@ import React from 'react';
 import { OccupationalHealthcareEntry } from '../../types';
 import { Icon } from "semantic-ui-react";
 
-const OccupationalHealthcareEntryDetails: React.FC<{entry: OccupationalHealthcareEntry}> = ({entry}) => {
+interface Props {
+  entry: OccupationalHealthcareEntry;
+}
+
+const OccupationalHealthcareEntryDetails: React.FC<Props> = ({entry}) => {
   return(
     <div>
       <Icon name="book" /> <br />

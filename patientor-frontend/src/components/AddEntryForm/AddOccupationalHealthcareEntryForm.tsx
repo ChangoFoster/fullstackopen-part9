@@ -10,7 +10,10 @@ interface Props {
   diagnosis: Diagnosis[]
 }
 
-const AddOccupationalHealthcareEntryForm: React.FC<Props> = ({ onSubmit, diagnosis }) => {
+const AddOccupationalHealthcareEntryForm: React.FC<Props> = ({
+  onSubmit,
+  diagnosis
+}) => {
   return(
     <Formik
       initialValues={{

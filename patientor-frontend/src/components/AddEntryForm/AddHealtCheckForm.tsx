@@ -3,7 +3,11 @@ import { Grid, Button } from "semantic-ui-react";
 import { Field, Formik, Form } from "formik";
 import { NewHealthCheckEntry, Diagnosis } from '../../types'
 
-import { TextField, NumberField, DiagnosisSelection } from "../../AddPatientModal/FormField";
+import {
+  TextField,
+  NumberField,
+  DiagnosisSelection
+} from "../../AddPatientModal/FormField";
 
 interface Props {
   onSubmit: (values: NewHealthCheckEntry) => void;

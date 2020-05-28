@@ -4,11 +4,16 @@ import { Icon } from "semantic-ui-react";
 
 import HealthRatingBar from '../../components/HealthRatingBar'
 
-const HealthCheckEntryDetails: React.FC<{entry: HealthCheckEntry}> = ({entry}) => {
+interface Props {
+  entry: HealthCheckEntry;
+}
+
+const HealthCheckEntryDetails: React.FC<Props> = ({entry}) => {
   return(
     <div>
       <Icon name="check circle" /> <br />
-      Rating: <HealthRatingBar rating={entry.healthCheckRating} showText={true} /><br />
+      Rating:
+      <HealthRatingBar rating={entry.healthCheckRating} showText={true} /><br />
     </div>
   );
 }

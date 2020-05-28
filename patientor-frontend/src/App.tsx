@@ -10,9 +10,6 @@ import { Diagnosis, Patient } from "./types";
 import PatientListPage from "./PatientListPage";
 import PatientDetailPage from './PatientDetailPage';
 
-//TODO: Add other entry form types - 9.26 and 9.27
-//TODO: Tidy up the code
-
 const App: React.FC = () => {
   const [, dispatch] = useStateValue();
   React.useEffect(() => {

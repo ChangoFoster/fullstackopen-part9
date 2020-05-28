@@ -40,7 +40,10 @@ const AddEntryForm: React.FC<Props> = ({ onSubmit }) => {
 
   return(
     <div>
-      <select value={type} onChange={({ target }) => setType(target.value as NewEntryType['type'])}>
+      <select
+        value={type}
+        onChange={({ target }) => setType(target.value as NewEntryType['type'])}
+      >
         <option value="HealthCheck">HealthCheck</option>
         <option value="Hospital">Hospital</option>
         <option value="OccupationalHealthcare">Occupational Healthcare</option>

@@ -5,8 +5,6 @@ const app = express();
 
 app.use(express.json());
 
-//TODO: Up to 9.5
-
 app.get('/hello', (_req, res) => {
   res.send('Hello Full Stack!');
 });
@@ -28,7 +26,6 @@ app.get('/bmi', (_req, res) => {
 });
 
 app.post('/exercises', (_req, res) => {
-  console.log(_req.body);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { target, log}: any = _req.body;
 

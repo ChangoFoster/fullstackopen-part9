@@ -9,9 +9,6 @@ app.use(express.json());
 
 const PORT = 3001;
 
-//TODO: Review utils, kinda messy
-//TODO: Clean up debug messages
-
 app.use('/api/ping', pingRouter);
 app.use('/api/patients', patientsRouter);
 app.use('/api/diagnosis', diagnosesRouter);

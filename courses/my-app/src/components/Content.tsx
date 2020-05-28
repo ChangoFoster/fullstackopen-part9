@@ -5,7 +5,9 @@ import { CoursePart } from '../types'
 const Content: FC<{courseParts: CoursePart[]}> = ({ courseParts }) => {
   return(
     <>
-      {courseParts.map(part => (<Part key={part.name} part={part} />))}
+      {courseParts.map(part =>
+        <Part key={part.name} part={part} />
+      )}
     </>
   );
 }

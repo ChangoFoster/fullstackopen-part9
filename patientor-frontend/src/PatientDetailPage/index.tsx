@@ -52,7 +52,6 @@ const PatientDetailPage: React.FC = () => {
   };
 
   const submitNewEntry = async (values: NewEntryType) => {
-    console.log(values);
     try {
       const { data: updatedPatient } = await axios.post<Patient>(
         `${apiBaseUrl}/patients/${id}/entries`,

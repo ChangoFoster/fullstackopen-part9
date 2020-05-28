@@ -30,11 +30,12 @@ router.get('/:id', (req, res) => {
   const patient = patientService.findById(id);
 
   try{
-    if(patient) {
-      res.send(patient);
-    } else {
+    if(!patient) {
       res.status(404).send("Patient not found");
+
     }
+
+    res.send(patient);  
   }
   catch (error) {
     res.status(400).send(error.message);
@@ -43,7 +44,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/:id/entries', (req, res) => {
   const { id } = req.params;
-  
+
   try{
     const newEntry = toEntryType(req.body);
     const patient = patientService.addEntry(id, newEntry);
